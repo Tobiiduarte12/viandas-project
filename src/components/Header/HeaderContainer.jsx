@@ -9,7 +9,7 @@ import {
 const HeaderContainer = () => {
   return (
     <HeaderStyled>
-      <LogoIcon src="./public/imgs/icon_viandas_now.png" alt="" />
+      <LogoIcon src="https://i.imgur.com/AQB6iib.png" alt="" />
       <LinksContainer>
         <NavLinkStyled to="/">Home</NavLinkStyled>
         <NavLinkStyled to="/login">Login</NavLinkStyled>

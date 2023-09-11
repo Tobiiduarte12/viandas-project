@@ -21,7 +21,7 @@ const Home = () => {
             </p>
             <StyleButton>Ver más</StyleButton>
           </HomeTitleContainer>
-          <StyleImg src="../public/imgs/img-home.png" alt="" />
+          <StyleImg src="https://i.imgur.com/2RKe6s6.png" alt="" />
         </HomeContent>
         <RecomendadosWrapper />
       </HomeContainer>

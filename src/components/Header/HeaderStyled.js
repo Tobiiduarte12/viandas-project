@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const HeaderStyled = styled.header`
   background-color: #202020;
-  background-image: url(.././public/imgs/navbar2.2.png);
+  background-image: url(https://i.imgur.com/Rg3MrDt.png);
   border-bottom: 1px solid #ebebeb;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   height: 100px;
