@@ -13,12 +13,19 @@ export const LocalCard = styled.div`
   gap: 10px;
   text-align: center;
   padding-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   & img {
     width: 100%;
     height: 150px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: 1px solid #ffff;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    transform: scale(1.02);
   }
 `;
 

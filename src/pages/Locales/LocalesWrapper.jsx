@@ -1,16 +1,14 @@
+import CardLocales from "../../components/CardLocalesWrapper/CardLocales";
+import { InfoTittle, LocalesSection } from "./LocalesWrapperStyled";
+
 const LocalesWrapper = () => {
   return (
-    <>
-      <h1 style={{ fontSize: "3rem", color: "white", marginTop: "3rem" }}>
-        Locales
-      </h1>
+    <LocalesSection>
+      <InfoTittle>Aquí puedes elegir entre tus locales favoritos 😋</InfoTittle>
       <div>
-        <ul>
-          <li>asddas</li>
-          <li>asdasdas</li>
-        </ul>
+        <CardLocales />
       </div>
-    </>
+    </LocalesSection>
   );
 };
 

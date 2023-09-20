@@ -30,6 +30,11 @@ export const LinksContainer = styled.div`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.2rem;
   text-decoration: none;
   color: white;
   transition: all 0.2s;

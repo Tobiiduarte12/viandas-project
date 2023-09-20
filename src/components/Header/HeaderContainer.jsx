@@ -6,14 +6,18 @@ import {
   NavLinkStyled,
 } from "./HeaderStyled";
 
+import {AiFillHome} from "react-icons/ai";
+import {AiOutlineUser} from "react-icons/ai";
+import {MdLocalDining} from "react-icons/md";
+
 const HeaderContainer = () => {
   return (
     <HeaderStyled>
       <LogoIcon src="https://i.imgur.com/AQB6iib.png" alt="" />
       <LinksContainer>
-        <NavLinkStyled to="/">Home</NavLinkStyled>
-        <NavLinkStyled to="/login">Login</NavLinkStyled>
-        <NavLinkStyled to="/locales">Locales</NavLinkStyled>
+        <NavLinkStyled to="/"><AiFillHome/>Home</NavLinkStyled>
+        <NavLinkStyled to="/login"><AiOutlineUser/>Login</NavLinkStyled>
+        <NavLinkStyled to="/locales"><MdLocalDining/>Locales</NavLinkStyled>
       </LinksContainer>
     </HeaderStyled>
   );
