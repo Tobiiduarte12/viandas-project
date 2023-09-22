@@ -1,15 +1,21 @@
+import {
+	InfoTittle,
+	LocalWrapper,
+	LocalesSection,
+} from "./LocalesWrapperStyled";
 import CardLocales from "../../components/CardLocalesWrapper/CardLocales";
-import { InfoTittle, LocalesSection } from "./LocalesWrapperStyled";
+
+import { AllLocales } from "../../data/DataAllLocales";
 
 const LocalesWrapper = () => {
-  return (
-    <LocalesSection>
-      <InfoTittle>Aquí puedes elegir entre tus locales favoritos 😋</InfoTittle>
-      <div>
-        <CardLocales />
-      </div>
-    </LocalesSection>
-  );
+	<LocalesSection>
+		<InfoTittle>Aquí puedes elegir entre tus locales favoritos 😋</InfoTittle>
+		<LocalWrapper>
+			{AllLocales.map((local) => {
+				return <CardLocales key={local.id} {...local} />;
+			})}
+		</LocalWrapper>
+	</LocalesSection>;
 };
 
 export default LocalesWrapper;
