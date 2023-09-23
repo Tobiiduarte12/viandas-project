@@ -11,6 +11,14 @@ const Login = () => {
 					<input type="gmail" placeholder="Usuario" />
 					<input type="password" placeholder="Contraseña" />
 					<ButtonStyled>Ingresar</ButtonStyled>
+					<p style={{ textAlign: "center", width: "150px" }}>
+						¿No tienes cuenta? haz click
+						<a href="#" style={{ textDecoration: "none", color: "steelblue" }}>
+							{" "}
+							aquí
+						</a>{" "}
+						para crearla
+					</p>
 				</FormStyled>
 			</LoginContainer>
 			;
