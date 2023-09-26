@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const HeaderStyled = styled.header`
   background-color: #202020;
@@ -46,9 +46,11 @@ export const NavLinkStyled = styled(NavLink)`
   }
 `;
 
-export const LogoIcon = styled.img`
+export const LogoIcon = styled(Link)`
   cursor: pointer;
-  width: 140px;
-  margin: 10px;
-  border-radius: 5px;
+  & img {
+    width: 140px;
+    margin: 10px;
+    border-radius: 5px;
+  }
 `;
