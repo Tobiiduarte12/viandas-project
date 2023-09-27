@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { LocalCard } from "../Recomendados/RecomendadosStyles";
 
 const CardLocalesStyled = styled.div`
   width: 300px;
-  height: 300px;
+  height: 500px;
   background-color: #202020ce;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
@@ -11,7 +13,6 @@ const CardLocalesStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
   transition: all 0.2s ease-in-out;
   border: 1px solid #ffff;
   padding-bottom: 25px;
@@ -34,10 +35,21 @@ const CardLocalesStyled = styled.div`
     color: #ffff;
     padding: 10px;
   }
+`;
 
+export const LinkItem = styled(Link)`
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 600;
+  background-color: var(--color-ut-orange);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
-    transform: scale(1.02);
+    color: #000;
+    background-color: #ffff;
   }
 `;
 
@@ -48,6 +60,7 @@ const CardLocales = ({ nombre, Image, description }) => {
       <img src={Image} alt={nombre} />
       <h3>{nombre}</h3>
       <p>{description}</p>
+      <LinkItem to={nombre}>Ver más</LinkItem>
     </CardLocalesStyled>
   );
 };

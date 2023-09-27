@@ -41,6 +41,11 @@ export const NavLinkStyled = styled(NavLink)`
   border-radius: 5px;
   padding: 8px;
 
+  &:hover {
+    background-color: var(--color-ut-orange);
+    opacity: 0.8;
+  }
+
   &.active {
     background-color: var(--color-ut-orange);
   }
