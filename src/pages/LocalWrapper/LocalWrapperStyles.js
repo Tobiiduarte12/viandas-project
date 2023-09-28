@@ -10,6 +10,14 @@ export const LocalWrapperSection = styled.section`
   padding: 50px;
 `;
 
+export const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  text-align: start;
+`;
+
 export const TitleLocal = styled.h1`
   font-size: 2rem;
   font-weight: 700;
@@ -21,6 +29,10 @@ export const DescriptionLocal = styled.p`
   font-size: 1.2rem;
   font-weight: 400;
   color: #fff;
+  width: 500px;
   text-align: center;
   margin-bottom: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
 `;

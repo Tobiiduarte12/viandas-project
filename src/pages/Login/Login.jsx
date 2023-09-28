@@ -4,15 +4,14 @@ import {
   FormStyled,
   LinkStyled,
   LoginContainer,
+  TitleFormStyled,
 } from "./LoginStyled";
 
 const Login = () => {
   return (
     <>
       <LoginContainer>
-        <h1 style={{ marginBottom: "20px", color: "white" }}>
-          Bienvenidos al login
-        </h1>
+        <TitleFormStyled>Bienvenido de nuevo 😁</TitleFormStyled>
         <FormStyled action="">
           <input type="gmail" placeholder="Usuario" />
           <input type="password" placeholder="Contraseña" />

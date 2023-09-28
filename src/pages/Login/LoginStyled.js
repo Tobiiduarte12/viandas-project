@@ -18,6 +18,7 @@ export const FormStyled = styled.form`
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  margin-top: 20px;
 
   & input {
     color: #fff;
@@ -32,6 +33,14 @@ export const FormStyled = styled.form`
     background-color: #303030;
     box-shadow: 0 0 0 2px #00ffff;
   }
+`;
+
+export const TitleFormStyled = styled.h1`
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 100px;
 `;
 
 export const ButtonStyled = styled.button`

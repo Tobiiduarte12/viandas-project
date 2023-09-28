@@ -5,14 +5,18 @@ import {
   NavLinkStyled,
 } from "./HeaderStyled";
 
+import { useNavigate } from "react-router-dom";
+
 import { AiFillHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
-// https://i.imgur.com/AQB6iib.png
+
 const HeaderContainer = () => {
+  const navigate = useNavigate();
+
   return (
     <HeaderStyled>
-      <LogoIcon to="/">
+      <LogoIcon onClick={() => navigate("/")}>
         <img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
       </LogoIcon>
       <LinksContainer>

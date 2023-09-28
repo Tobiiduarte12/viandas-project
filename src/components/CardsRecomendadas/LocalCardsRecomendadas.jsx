@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export const LocalCard = styled(Link)`
+export const LocalCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -31,8 +31,10 @@ export const LocalCard = styled(Link)`
 
 // eslint-disable-next-line react/prop-types
 const LocalCards = ({ Image, nombre }) => {
+  const navigate = useNavigate();
+
   return (
-    <LocalCard to={nombre}>
+    <LocalCard onClick={() => navigate(`/locales/${nombre}`)}>
       <img src={Image} alt={nombre} />
       <h3>{nombre}</h3>
     </LocalCard>

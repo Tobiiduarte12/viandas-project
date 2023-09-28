@@ -16,10 +16,7 @@ const Routes = () => {
     <BrowserRouter>
       <Layout>
         <ReactDomRoutes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path=":local" element={<LocalWrapper />}></Route>
-          </Route>
+          <Route path="/" element={<Home />} />
 
           <Route path="login" element={<Login />} />
           <Route path="signin" element={<SignIn />} />
