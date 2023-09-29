@@ -14,4 +14,9 @@ export const ValidationSchema = Yup.object({
     .integer("Debe ser un número entero"),
   email: Yup.string().email("Email inválido").required("Campo requerido"),
   address: Yup.string().trim().required("Campo requerido"),
+  password: Yup.string()
+    .trim()
+    .min(6, "Mínimo 6 caracteres")
+    .max(10, "Máximo 10 caracteres")
+    .required("Campo requerido"),
 });

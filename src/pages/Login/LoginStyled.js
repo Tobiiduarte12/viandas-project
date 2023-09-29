@@ -16,7 +16,6 @@ export const TitleFormStyled = styled.h1`
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  margin-top: 100px;
 `;
 
 export const AccountCreateStyled = styled.div`

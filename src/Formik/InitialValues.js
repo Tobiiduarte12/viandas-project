@@ -4,4 +4,5 @@ export const InitialValues = {
   age: "",
   email: "",
   address: "",
+  password: "",
 };
