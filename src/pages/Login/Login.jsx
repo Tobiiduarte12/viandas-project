@@ -1,8 +1,9 @@
+import LoginForm from "../../components/LoginForm/LoginForm";
 import {
-  AccountCreateStyled,
-  ButtonStyled,
-  FormStyled,
-  LinkStyled,
+  // AccountCreateStyled,
+  // ButtonStyled,
+  // FormStyled,
+  // LinkStyled,
   LoginContainer,
   TitleFormStyled,
 } from "./LoginStyled";
@@ -12,15 +13,7 @@ const Login = () => {
     <>
       <LoginContainer>
         <TitleFormStyled>Bienvenido de nuevo 😁</TitleFormStyled>
-        <FormStyled action="">
-          <input type="gmail" placeholder="Usuario" />
-          <input type="password" placeholder="Contraseña" />
-          <ButtonStyled>Ingresar</ButtonStyled>
-          <AccountCreateStyled>
-            ¿No tienes una cuenta?{" "}
-            <LinkStyled to="/signin"> Registrate</LinkStyled>
-          </AccountCreateStyled>
-        </FormStyled>
+        <LoginForm>hola</LoginForm>
       </LoginContainer>
       ;
     </>

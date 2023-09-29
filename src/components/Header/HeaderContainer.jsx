@@ -24,13 +24,15 @@ const HeaderContainer = () => {
           <AiFillHome />
           Home
         </NavLinkStyled>
-        <NavLinkStyled to="/login">
-          <AiOutlineUser />
-          Login
-        </NavLinkStyled>
+
         <NavLinkStyled to="/locales">
           <MdLocalDining />
           Locales
+        </NavLinkStyled>
+
+        <NavLinkStyled to="/login">
+          <AiOutlineUser />
+          Login
         </NavLinkStyled>
       </LinksContainer>
     </HeaderStyled>
