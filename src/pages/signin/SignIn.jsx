@@ -6,7 +6,7 @@ import SignInForm from "../../components/signInForm/SignInForm";
 const SignIn = () => {
   return (
     <SignInSection>
-      <TitleFormStyled>Bienvenido 😁</TitleFormStyled>
+      <TitleFormStyled>Crea una cuenta</TitleFormStyled>
       <SignInForm />
     </SignInSection>
   );

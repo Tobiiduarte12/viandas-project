@@ -23,10 +23,10 @@ export const HeaderStyled = styled.header`
 
 export const LinksContainer = styled.div`
   display: flex;
-  width: 300px;
+  width: 30%;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 5px;
 `;
 
 export const NavLinkStyled = styled(NavLink)`
@@ -58,4 +58,8 @@ export const LogoIcon = styled.div`
     margin: 10px;
     border-radius: 5px;
   }
+`;
+
+export const UserContainer = styled.div`
+  font-size: 1.5rem;
 `;

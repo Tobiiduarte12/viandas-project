@@ -4,19 +4,21 @@ export const ValidationSchema = Yup.object({
   name: Yup.string()
     .trim()
     .max(10, "Máximo 10 caracteres")
-    .required("Campo requerido"),
-  surname: Yup.string().trim().required("Campo requerido"),
+    .required("Completa este campo por favor"),
+  surname: Yup.string().trim().required("Completa este campo por favor"),
   age: Yup.number()
     .typeError("Debe ser un número")
-    .moreThan(18, "Debe ser mayor de edad")
+    .moreThan(18, "Debes ser mayor de 18 anios")
     .required("Campo requerido")
-    .lessThan(100, "Debe ser menor a 100")
+    .lessThan(100, "Debes ser menos de 100 anios")
     .integer("Debe ser un número entero"),
-  email: Yup.string().email("Email inválido").required("Campo requerido"),
-  address: Yup.string().trim().required("Campo requerido"),
+  email: Yup.string()
+    .email(`el email debe ser de tipo "Example@gmail.com"`)
+    .required("Completa este campo por favor"),
+  address: Yup.string().trim().required("Completa este campo por favor"),
   password: Yup.string()
     .trim()
-    .min(6, "Mínimo 6 caracteres")
-    .max(10, "Máximo 10 caracteres")
-    .required("Campo requerido"),
+    .min(6, "Requiere un mínimo de 6 caracteres")
+    .max(10, "Requiere un máximo 10 caracteres")
+    .required("Completa este campo por favor"),
 });

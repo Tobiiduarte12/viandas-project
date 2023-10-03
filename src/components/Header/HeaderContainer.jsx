@@ -3,6 +3,7 @@ import {
   LinksContainer,
   LogoIcon,
   NavLinkStyled,
+  UserContainer,
 } from "./HeaderStyled";
 
 import { useNavigate } from "react-router-dom";
@@ -12,11 +13,11 @@ import { AiOutlineUser } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
 
 const HeaderContainer = () => {
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   return (
     <HeaderStyled>
-      <LogoIcon onClick={() => navigate("/")}>
+      <LogoIcon onClick={() => Navigate("/")}>
         <img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
       </LogoIcon>
       <LinksContainer>
@@ -30,10 +31,16 @@ const HeaderContainer = () => {
           Locales
         </NavLinkStyled>
 
-        <NavLinkStyled to="/login">
-          <AiOutlineUser />
-          Login
+        <NavLinkStyled to="/login" style={{ fontSize: "0.8rem" }}>
+          Iniciar sesión
         </NavLinkStyled>
+
+        <UserContainer
+          onClick={() => Navigate("/signin")}
+          style={{ background: "#20202060" }}
+        >
+          <AiOutlineUser />
+        </UserContainer>
       </LinksContainer>
     </HeaderStyled>
   );
