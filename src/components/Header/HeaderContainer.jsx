@@ -18,7 +18,11 @@ const HeaderContainer = () => {
   return (
     <HeaderStyled>
       <LogoIcon onClick={() => Navigate("/")}>
-        <img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
+        <img
+          src="https://i.imgur.com/AQB6iib.png"
+          alt="icon"
+          whileTap={{ scale: 0.95 }}
+        />
       </LogoIcon>
       <LinksContainer>
         <NavLinkStyled to="/">
