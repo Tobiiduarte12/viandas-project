@@ -16,6 +16,7 @@ export const HomeContent = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  max-width: 1200px;
 `;
 
 export const HomeTitleContainer = styled.div`

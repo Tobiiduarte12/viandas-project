@@ -6,6 +6,7 @@ export const RecomendadosContainer = styled.div`
   width: 90%;
   gap: 10px;
   margin-top: 10px;
+  max-width: 1200px;
 `;
 
 export const LocalesContainer = styled.div`
