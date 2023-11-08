@@ -14,7 +14,7 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   text-align: start;
 `;
 
@@ -23,6 +23,12 @@ export const TitleLocal = styled.h1`
   font-weight: 700;
   color: #fff;
   margin-bottom: 20px;
+`;
+
+export const NameSpan = styled.span`
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
 `;
 
 export const DescriptionLocal = styled.p`

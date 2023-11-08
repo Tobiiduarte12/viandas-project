@@ -6,29 +6,24 @@ import {
   DescriptionContainer,
   DescriptionLocal,
   LocalWrapperSection,
+  NameSpan,
   TitleLocal,
 } from "./LocalWrapperStyles";
 
 const LocalWrapper = () => {
   const { local } = useParams();
 
+  const { imgLocal } = useParams();
+
   return (
     <LocalWrapperSection>
       <DescriptionContainer>
         <TitleLocal>{local}</TitleLocal>
         <DescriptionLocal>
-          En {local} nos centramos en llevarte la mejor comida a tu casa, con la
-          mejor calidad y el mejor servicio.
+          En <NameSpan>"{local}"</NameSpan> nos centramos en llevarte la mejor
+          comida a tu casa, con la mejor calidad y el mejor servicio.
         </DescriptionLocal>
       </DescriptionContainer>
-      <div>
-        <h2>Platos principales:</h2>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <span>slider de distintos platos</span>
-          <span>slider de distintos platos</span>
-          <span>slider de distintos platos</span>
-        </div>
-      </div>
     </LocalWrapperSection>
   );
 };

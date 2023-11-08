@@ -15,15 +15,17 @@ export const FormContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ebebeb;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
-  background-color: #ffffff81;
 `;
 
 export const FormStyled = styled(Form)`
   display: flex;
+  background-color: #ffffff81;
+  border-radius: 8px;
+  padding: 20px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;

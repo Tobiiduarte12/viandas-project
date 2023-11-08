@@ -35,6 +35,12 @@ export const HomeTitleContainer = styled.div`
   & span {
     font-size: 1.6rem;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const StyleButton = styled.button`
@@ -59,4 +65,8 @@ export const StyleButton = styled.button`
 export const StyleImg = styled.img`
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

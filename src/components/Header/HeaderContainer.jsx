@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 import { AiFillHome } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
+import BurguerMenu from "../burguer-menu/BurguerMenu";
 
 const HeaderContainer = () => {
   const Navigate = useNavigate();
@@ -35,6 +36,7 @@ const HeaderContainer = () => {
 
         <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
       </LinksContainer>
+      <BurguerMenu />
     </HeaderStyled>
   );
 };

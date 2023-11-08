@@ -24,6 +24,10 @@ export const LinksContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 5px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavLinkStyled = styled(NavLink)`
