@@ -13,7 +13,7 @@ const Login = () => {
     <>
       <LoginContainer>
         <TitleFormStyled>Bienvenido de nuevo 😁</TitleFormStyled>
-        <LoginForm>hola</LoginForm>
+        <LoginForm></LoginForm>
       </LoginContainer>
       ;
     </>

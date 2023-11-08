@@ -16,14 +16,11 @@ export const HeaderStyled = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  @media (min-width: 768px) {
-    padding: 0 40px;
-  }
+  padding: 0 20px;
 `;
 
 export const LinksContainer = styled.div`
   display: flex;
-  width: 30%;
   align-items: center;
   justify-content: center;
   gap: 5px;
@@ -55,7 +52,6 @@ export const LogoIcon = styled.div`
   cursor: pointer;
   & img {
     width: 140px;
-    margin: 10px;
     border-radius: 5px;
   }
 `;

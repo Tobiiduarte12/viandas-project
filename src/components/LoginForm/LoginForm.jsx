@@ -26,9 +26,8 @@ const LoginForm = () => {
           <ButtonStyled type="submit">Entrar</ButtonStyled>
         </FormStyled>
       </Formik>
-      <p>
-        ¿No tienes cuenta?{" "}
-        <LinkStyled onClick={() => navigate(`/signin`)}>Registrate</LinkStyled>
+      <p onClick={() => navigate("/signin")}>
+        ¿No tienes cuenta? <LinkStyled>Registrate</LinkStyled>
       </p>
     </>
   );

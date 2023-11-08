@@ -11,10 +11,11 @@ export const RecomendadosContainer = styled.div`
 
 export const LocalesContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  gap: 10px;
+  max-width: 1200px;
   flex-wrap: wrap;
 `;
 

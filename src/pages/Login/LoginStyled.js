@@ -26,8 +26,8 @@ export const AccountCreateStyled = styled.div`
 `;
 
 export const LinkStyled = styled(Link)`
-  color: steelblue;
-  font-size: 1.2rem;
+  font-style: italic;
+  font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
 `;

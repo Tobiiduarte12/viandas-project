@@ -3,13 +3,11 @@ import {
   LinksContainer,
   LogoIcon,
   NavLinkStyled,
-  UserContainer,
 } from "./HeaderStyled";
 
 import { useNavigate } from "react-router-dom";
 
 import { AiFillHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
 
 const HeaderContainer = () => {
@@ -35,16 +33,7 @@ const HeaderContainer = () => {
           Locales
         </NavLinkStyled>
 
-        <NavLinkStyled to="/login" style={{ fontSize: "0.8rem" }}>
-          Iniciar sesión
-        </NavLinkStyled>
-
-        <UserContainer
-          onClick={() => Navigate("/signin")}
-          style={{ background: "#20202060" }}
-        >
-          <AiOutlineUser />
-        </UserContainer>
+        <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
       </LinksContainer>
     </HeaderStyled>
   );

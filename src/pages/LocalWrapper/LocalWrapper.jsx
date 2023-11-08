@@ -17,10 +17,8 @@ const LocalWrapper = () => {
       <DescriptionContainer>
         <TitleLocal>{local}</TitleLocal>
         <DescriptionLocal>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          quae odit amet rerum aspernatur cumque quaerat quis magnam animi eius!
-          Nostrum adipisci culpa, velit incidunt obcaecati labore quia in
-          reiciendis!
+          En {local} nos centramos en llevarte la mejor comida a tu casa, con la
+          mejor calidad y el mejor servicio.
         </DescriptionLocal>
       </DescriptionContainer>
       <div>
