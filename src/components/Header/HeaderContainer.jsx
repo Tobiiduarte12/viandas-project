@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
 import BurguerMenu from "../burguer-menu/BurguerMenu";
+import { motion } from "framer-motion";
 
 const HeaderContainer = () => {
   const Navigate = useNavigate();
@@ -17,11 +18,7 @@ const HeaderContainer = () => {
   return (
     <HeaderStyled>
       <LogoIcon onClick={() => Navigate("/")}>
-        <img
-          src="https://i.imgur.com/AQB6iib.png"
-          alt="icon"
-          whileTap={{ scale: 0.95 }}
-        />
+        <img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
       </LogoIcon>
       <LinksContainer>
         <NavLinkStyled to="/">
