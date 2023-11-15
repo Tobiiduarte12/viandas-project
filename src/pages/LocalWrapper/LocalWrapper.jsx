@@ -6,7 +6,6 @@ import {
   DescriptionContainer,
   // DescriptionLocal,
   LocalWrapperSection,
-  NameSpan,
   TitleLocal,
 } from "./LocalWrapperStyles";
 import CategoriesContainer from "../../components/CategoriesContainer/CategoriesContainer";
