@@ -4,6 +4,7 @@ export const BurguerMenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+  z-index: 200;
 
   @media (min-width: 768px) {
     display: none;
@@ -31,7 +32,7 @@ export const Overlay = styled.div`
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3px);

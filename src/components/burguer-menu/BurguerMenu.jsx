@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import {
-  BurguerLinks,
-  BurguerMenuContainer,
-  Overlay,
-} from "./BurguerMenuStyles";
+import { BurguerLinks, BurguerMenuContainer } from "./BurguerMenuStyles";
 import { motion } from "framer-motion";
+
+import Overlay from "../overlay/Overlay.jsx";
 
 import { HiMenuAlt3 } from "react-icons/hi";
 import { NavLinkStyled } from "../Header/HeaderStyled";
@@ -20,31 +18,37 @@ const BurguerMenu = () => {
   };
 
   return (
-    <BurguerMenuContainer>
-      <FaShoppingCart
-        style={{ fontSize: "1.5rem", cursor: "pointer", marginRight: "1rem" }}
-      />
-
-      <HiMenuAlt3 style={{ cursor: "pointer" }} onClick={toggleMenu} />
-      {open && (
-        <motion.div
-          animate={{ x: [200, 30], y: [-20] }}
-          transition={{ ease: "easeIn", duration: 0.5 }}
-        >
-          <BurguerLinks>
-            <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
-            <NavLinkStyled to="/">
-              <AiFillHome />
-              Home
-            </NavLinkStyled>
-            <NavLinkStyled to="/locales">
-              <MdLocalDining />
-              Locales
-            </NavLinkStyled>
-          </BurguerLinks>
-        </motion.div>
-      )}
-    </BurguerMenuContainer>
+    <>
+      <BurguerMenuContainer>
+        <FaShoppingCart
+          style={{ fontSize: "1.5rem", cursor: "pointer", marginRight: "1rem" }}
+        />
+        <HiMenuAlt3 style={{ cursor: "pointer" }} onClick={toggleMenu} />
+        {open && (
+          <>
+            <div onClick={toggleMenu}>
+              <Overlay />
+            </div>
+            <motion.div
+              animate={{ x: [200, 30], y: [-20] }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
+            >
+              <BurguerLinks>
+                <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
+                <NavLinkStyled to="/">
+                  <AiFillHome />
+                  Home
+                </NavLinkStyled>
+                <NavLinkStyled to="/locales">
+                  <MdLocalDining />
+                  Locales
+                </NavLinkStyled>
+              </BurguerLinks>
+            </motion.div>
+          </>
+        )}
+      </BurguerMenuContainer>
+    </>
   );
 };
 
