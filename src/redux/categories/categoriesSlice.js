@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Categories } from "../../data/Categories";
+import { Categories } from "../../data/Categories.js";
 
 const INITIAL_STATE = {
   categories: Categories,
