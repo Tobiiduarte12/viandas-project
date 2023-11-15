@@ -6,7 +6,7 @@ import LocalCardsRecomendadas from "../CardsRecomendadas/LocalCardsRecomendadas"
 const RecomendadosWrapper = () => {
   return (
     <RecomendadosContainer>
-      <h1>Viandas Recomendadas</h1>
+      <h1>Locales Recomendados</h1>
       <LocalesContainer>
         {LocalesRecomendados.map((local) => {
           return <LocalCardsRecomendadas key={local.id} {...local} />;
