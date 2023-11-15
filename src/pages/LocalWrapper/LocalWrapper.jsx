@@ -10,7 +10,7 @@ import {
   TitleLocal,
 } from "./LocalWrapperStyles";
 import CategoriesContainer from "../../components/CategoriesContainer/CategoriesContainer";
-import ProductsContainer from "../../components/productsContainer/productsContainer";
+import ProductsContainer from "../../components/productsContainer/ProductsContainer.jsx";
 
 const LocalWrapper = () => {
   const { local } = useParams();
