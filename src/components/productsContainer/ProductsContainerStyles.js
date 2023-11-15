@@ -1,34 +1,10 @@
 import styled from "styled-components";
 
-// export const ProductsContainerStyled = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 2rem;
-//   padding: 2rem;
-//   margin: 2rem;
-// `;
-
-// export const ProductCardStyled = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 1rem;
-//   padding: 1rem;
-//   margin: 1rem;
-//   border: 1px solid black;
-//   border-radius: 1rem;
-//   width: 20rem;
-//   height: 30rem;
-// `;
-
 export const ProductsContainerStyled = styled.div`
   display: grid;
   place-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, 300px);
   row-gap: 3.5rem;
   width: 100%;
   padding: 1rem 0;
@@ -39,7 +15,7 @@ export const ProductsContainerStyled = styled.div`
   border-radius: 15px;
 
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.5rem;
     background: black;
   }
 
@@ -50,18 +26,26 @@ export const ProductsContainerStyled = styled.div`
       rgba(253, 29, 29, 1) 50%,
       rgba(252, 176, 69, 1) 100%
     );
-    border-radius: 10px;
+    border-radius: 1rem;
   }
 `;
 
 export const ProductCardStyled = styled.div`
-  background: var(--gray-bg);
-  width: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid white;
+  width: 200px;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+
   img {
     width: 100%;
-    margin-bottom: 1rem;
+    height: 50%;
   }
   h2 {
     font-weight: 600;
@@ -70,6 +54,7 @@ export const ProductCardStyled = styled.div`
   p {
     color: #666;
     font-size: 1.2rem;
+    font-weight: 900;
   }
 `;
 

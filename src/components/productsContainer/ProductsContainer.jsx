@@ -7,8 +7,6 @@ import { useSelector } from "react-redux";
 const ProductsContainer = () => {
   let { products } = useSelector((state) => state.products);
 
-  //   console.log(products);
-
   return (
     <>
       <ProductsContainerStyled>

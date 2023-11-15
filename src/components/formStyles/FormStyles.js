@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
   justify-content: center;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
 `;
 
 export const FormStyled = styled(Form)`
@@ -31,6 +31,14 @@ export const FormStyled = styled(Form)`
   gap: 10px;
   flex-wrap: wrap;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    & input {
+      width: 100%;
+    }
+  }
 `;
 
 export const ButtonStyled = styled.button`

@@ -38,18 +38,18 @@ const CardLocalesStyled = styled.div`
 `;
 
 export const LinkItem = styled(Link)`
+  background: linear-gradient(83deg, #ffa100, #fb103d);
+  color: #fff;
   text-decoration: none;
-  color: #ffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1rem;
   font-weight: 600;
-  background-color: var(--color-ut-orange);
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
   &:hover {
-    color: #000;
-    background-color: #ffff;
+    transform: scale(1.05);
   }
 `;
 
