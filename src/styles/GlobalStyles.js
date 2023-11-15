@@ -16,6 +16,19 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: #141516;
+
+        &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      rgba(252, 176, 69, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
     }
     
     :root {

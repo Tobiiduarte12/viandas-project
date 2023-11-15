@@ -4,26 +4,24 @@ import { useParams } from "react-router-dom";
 
 import {
   DescriptionContainer,
-  DescriptionLocal,
+  // DescriptionLocal,
   LocalWrapperSection,
   NameSpan,
   TitleLocal,
 } from "./LocalWrapperStyles";
+import CategoriesContainer from "../../components/CategoriesContainer/CategoriesContainer";
+import ProductsContainer from "../../components/productsContainer/productsContainer";
 
 const LocalWrapper = () => {
   const { local } = useParams();
-
-  const { imgLocal } = useParams();
 
   return (
     <LocalWrapperSection>
       <DescriptionContainer>
         <TitleLocal>{local}</TitleLocal>
-        <DescriptionLocal>
-          En <NameSpan>"{local}"</NameSpan> nos centramos en llevarte la mejor
-          comida a tu casa, con la mejor calidad y el mejor servicio.
-        </DescriptionLocal>
       </DescriptionContainer>
+      <CategoriesContainer></CategoriesContainer>
+      <ProductsContainer></ProductsContainer>
     </LocalWrapperSection>
   );
 };
