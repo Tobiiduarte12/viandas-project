@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductsContainerStyled } from "./productsContainerStyles";
+import { ProductsContainerStyled } from "./ProductsContainerStyles";
 // import { Products } from "../../data/Products";
 import CardProduct from "./Product";
 import { useSelector } from "react-redux";

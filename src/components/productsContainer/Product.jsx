@@ -4,7 +4,7 @@ import {
   CardPrice,
   ContainerPrice,
   CardButton,
-} from "./productsContainerStyles";
+} from "./ProductsContainerStyles";
 import { useDispatch } from "react-redux";
 
 const CardProduct = ({ img, title, desc, price, id }) => {
