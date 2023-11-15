@@ -6,8 +6,9 @@ export const LayoutWrapper = styled.div`
   height: auto;
   background-image: url(https://i.imgur.com/oNKbEPt.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 
   & p {
     text-align: center;

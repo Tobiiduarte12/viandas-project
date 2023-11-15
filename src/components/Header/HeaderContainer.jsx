@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 
 import { AiFillHome } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
+
 import BurguerMenu from "../burguer-menu/BurguerMenu";
 import { motion } from "framer-motion";
 
@@ -32,6 +34,8 @@ const HeaderContainer = () => {
         </NavLinkStyled>
 
         <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
+
+        <FaShoppingCart style={{ fontSize: "1.5rem", cursor: "pointer" }} />
       </LinksContainer>
       <BurguerMenu />
     </HeaderStyled>

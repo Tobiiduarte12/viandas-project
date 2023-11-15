@@ -17,6 +17,7 @@ export const DescriptionContainer = styled.div`
   align-items: center;
   text-align: start;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const TitleLocal = styled.h1`
@@ -35,6 +36,10 @@ export const TitleLocal = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const NameSpan = styled.span`

@@ -29,8 +29,8 @@ export const InputStyled = styled.input`
   border-radius: 5px;
   transition: 0.5s;
 
-  :focus {
-    background-color: #303030;
+  &:focus {
+    background-color: #404040;
     box-shadow: 0 0 0 2px #00ffff;
     border: 1px solid #fff;
   }

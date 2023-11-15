@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  CardCategoryStyled,
   CategoriesContainerStyled,
+  PCategorias,
 } from "./CategoriesContainerStyles";
 // import { Categories } from "../../data/categories";
 import { useSelector } from "react-redux";
@@ -11,11 +11,14 @@ const CategoriesContainer = () => {
   const { categories } = useSelector((state) => state.categories);
 
   return (
-    <CategoriesContainerStyled>
-      {categories.map((category) => {
-        return <Categoria {...category} key={category.id}></Categoria>;
-      })}
-    </CategoriesContainerStyled>
+    <>
+      <PCategorias>Categorias</PCategorias>
+      <CategoriesContainerStyled>
+        {categories.map((category) => {
+          return <Categoria {...category} key={category.id}></Categoria>;
+        })}
+      </CategoriesContainerStyled>
+    </>
   );
 };
 

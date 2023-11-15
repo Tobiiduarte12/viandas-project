@@ -26,7 +26,7 @@ export const CardCategoryStyled = styled(motion.div)`
   text-align: center;
   border: 1px solid white;
 
-  width: 120px;
+  width: 150px;
   height: 150px;
 
   background-color: ${({ selected }) => (selected ? "blue" : "red")};
@@ -37,10 +37,35 @@ export const CardCategoryStyled = styled(motion.div)`
     font-size: 1rem;
   }
 
+  img {
+    width: 100px;
+
+    @media (max-width: 600px) {
+      width: 80px;
+    }
+  }
+
   :first-child {
     img {
       padding-top: 7px;
       padding-bottom: 7px;
     }
+  }
+`;
+
+export const PCategorias = styled.p`
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  position: relative;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  @media (max-width: 500px) {
+    width: 50%;
+    left: 5%;
   }
 `;

@@ -10,6 +10,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { NavLinkStyled } from "../Header/HeaderStyled";
 import { AiFillHome } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
 
 const BurguerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -20,6 +21,10 @@ const BurguerMenu = () => {
 
   return (
     <BurguerMenuContainer>
+      <FaShoppingCart
+        style={{ fontSize: "1.5rem", cursor: "pointer", marginRight: "1rem" }}
+      />
+
       <HiMenuAlt3 style={{ cursor: "pointer" }} onClick={toggleMenu} />
       {open && (
         <motion.div

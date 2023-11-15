@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardCategoryStyled } from "./CategoriesContainerStyles";
+import { selectCategory } from "../../redux/categories/categoriesSlice.js";
 
 const Categoria = ({ img, title, category }) => {
   const { selectedCategory } = useSelector((state) => state.categories);

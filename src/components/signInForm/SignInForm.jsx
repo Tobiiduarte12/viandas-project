@@ -1,14 +1,11 @@
 import React from "react";
 
 import { Formik } from "formik";
-import {
-  ButtonStyled,
-  FormContainer,
-  FormStyled,
-} from "../formStyles/FormStyles";
+import { FormContainer, FormStyled } from "../formStyles/FormStyles";
 import FormInput from "../formInput/FormInput";
 import { InitialValues } from "../../Formik/InitialValues";
 import { ValidationSchema } from "../../Formik/ValidationSchema";
+import { ButtonStyled } from "../buttonSubmit/SubmitStyles";
 
 const SignInForm = () => {
   return (

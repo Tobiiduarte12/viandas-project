@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const BurguerMenuContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 4rem;
 
   @media (min-width: 768px) {
@@ -14,7 +15,7 @@ export const BurguerLinks = styled.div`
   flex-direction: column;
   position: fixed;
   align-items: center;
-  top: 100px;
+  top: 70px;
   justify-content: space-around;
   right: 0;
   width: 200px;
