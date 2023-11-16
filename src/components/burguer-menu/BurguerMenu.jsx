@@ -16,7 +16,6 @@ const BurguerMenu = () => {
   const toggleMenu = () => {
     setOpen(!open);
   };
-
   return (
     <>
       <BurguerMenuContainer>
