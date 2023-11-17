@@ -3,39 +3,37 @@ import React from "react";
 import { Formik } from "formik";
 import { FormContainer, FormStyled } from "../formStyles/FormStyles";
 import FormInput from "../formInput/FormInput";
-import { InitialValues } from "../../Formik/InitialValues";
-import { ValidationSchema } from "../../Formik/ValidationSchema";
+import {
+	InitialValues,
+	registerInitialValues,
+} from "../../Formik/InitialValues";
+import {
+	ValidationSchema,
+	registerValidationSchema,
+} from "../../Formik/ValidationSchema";
 import { ButtonStyled } from "../buttonSubmit/SubmitStyles";
 
 const SignInForm = () => {
-  return (
-    <>
-      <Formik
-        initialValues={InitialValues}
-        validationSchema={ValidationSchema}
-        onSubmit={(values, { resetForm }) => {
-          console.log(values);
-          resetForm();
-        }}
-      >
-        <FormContainer>
-          <FormStyled>
-            <FormInput name="name" label="Nombre" type="text" />
-            <FormInput name="surname" label="Apellido" type="text" />
-            <FormInput name="age" label="Edad" type="number" />
-            <FormInput name="email" label="Email" type="email" />
-            <FormInput name="password" label="Contrasenia" type="password" />
-            <FormInput
-              name="password"
-              label=" Repetir contrasenia"
-              type="password"
-            />
-          </FormStyled>
-          <ButtonStyled type="submit">Registrarse</ButtonStyled>
-        </FormContainer>
-      </Formik>
-    </>
-  );
+	return (
+		<>
+			<Formik
+				initialValues={registerInitialValues}
+				validationSchema={registerValidationSchema}
+				onSubmit={(values, actions) => {
+					console.log(values);
+					actions.resetForm();
+				}}>
+				<FormContainer>
+					<FormStyled>
+						<FormInput name="name" label="Nombre" type="text" />
+						<FormInput name="email" label="Email" type="email" />
+						<FormInput name="password" label="Contraseña" type="password" />
+					</FormStyled>
+					<ButtonStyled type="button">Registrare</ButtonStyled>
+				</FormContainer>
+			</Formik>
+		</>
+	);
 };
 
 export default SignInForm;
