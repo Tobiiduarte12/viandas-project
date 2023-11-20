@@ -1,13 +1,10 @@
-export const InitialValues = {
+export const registerInitialValues = {
 	name: "",
-	surname: "",
-	age: "",
 	email: "",
 	password: "",
 };
 
-export const registerInitialValues = {
-	name: "",
+export const loginInitialValues = {
 	email: "",
 	password: "",
 };
