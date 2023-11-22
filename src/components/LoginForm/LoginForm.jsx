@@ -6,9 +6,14 @@ import FormInput from "../formInput/FormInput";
 import { LinkStyled } from "../../pages/Login/LoginStyled";
 import { useNavigate } from "react-router-dom";
 import Submit from "../submit/Submit";
+import { loginUser } from "../../axios/axios-users";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "../../redux/user/userSlice";
+import useRedirect from "../hooks/useRedirect";
 
 const LoginForm = () => {
-	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	useRedirect();
 
 	return (
 		<>
@@ -16,9 +21,16 @@ const LoginForm = () => {
 			<Formik
 				initialValues={loginInitialValues}
 				validationSchema={loginValidationSchema}
-				onSubmit={(values, { resetForm }) => {
-					console.log(values);
-					resetForm();
+				onSubmit={async (values) => {
+					const user = await loginUser(values);
+					if (user) {
+						dispatch(
+							setCurrentUser({
+								...user.usuario,
+								token: user.token,
+							})
+						);
+					}
 				}}>
 				<FormStyled>
 					<FormInput name="email" label="Email" type="email" />
@@ -26,8 +38,8 @@ const LoginForm = () => {
 					<Submit>Entrar</Submit>
 				</FormStyled>
 			</Formik>
-			<p onClick={() => navigate("/register")}>
-				¿No tienes cuenta? <LinkStyled>Registrate</LinkStyled>
+			<p>
+				¿No tienes cuenta? <LinkStyled to="/register">Registrate</LinkStyled>
 			</p>
 		</>
 	);

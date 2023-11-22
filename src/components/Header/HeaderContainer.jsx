@@ -1,8 +1,9 @@
 import {
-  HeaderStyled,
-  LinksContainer,
-  LogoIcon,
-  NavLinkStyled,
+	HeaderStyled,
+	LinksContainer,
+	LogoIcon,
+	NavLinkStyled,
+	SpanUser,
 } from "./HeaderStyled";
 
 import { useNavigate } from "react-router-dom";
@@ -10,36 +11,59 @@ import { useNavigate } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { MdLocalDining } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 
 import BurguerMenu from "../burguer-menu/BurguerMenu";
-import { motion } from "framer-motion";
+import { toggleHiddenMenu } from "../../redux/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import ModalUser from "./modalUser/ModalUser";
 
 const HeaderContainer = () => {
-  const Navigate = useNavigate();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
-  return (
-    <HeaderStyled>
-      <LogoIcon onClick={() => Navigate("/")}>
-        <img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
-      </LogoIcon>
-      <LinksContainer>
-        <NavLinkStyled to="/">
-          <AiFillHome />
-          Home
-        </NavLinkStyled>
+	const { currentUser, hiddenMenu } = useSelector((state) => state.user);
 
-        <NavLinkStyled to="/locales">
-          <MdLocalDining />
-          Locales
-        </NavLinkStyled>
+	return (
+		<>
+			{" "}
+			<HeaderStyled>
+				<LogoIcon onClick={() => navigate("/")}>
+					<img src="https://i.imgur.com/AQB6iib.png" alt="icon" />
+				</LogoIcon>
+				<LinksContainer>
+					<NavLinkStyled to="/">
+						<AiFillHome />
+						Home
+					</NavLinkStyled>
 
-        <NavLinkStyled to="/login">Iniciar sesión</NavLinkStyled>
+					<NavLinkStyled to="/locales">
+						<MdLocalDining />
+						Locales
+					</NavLinkStyled>
 
-        <FaShoppingCart style={{ fontSize: "1.5rem", cursor: "pointer" }} />
-      </LinksContainer>
-      <BurguerMenu />
-    </HeaderStyled>
-  );
+					{currentUser ? (
+						<SpanUser>{currentUser.nombre}</SpanUser>
+					) : (
+						<NavLinkStyled to="/login">iniciar sesion</NavLinkStyled>
+					)}
+					<FaUser
+						onClick={() => {
+							currentUser
+								? dispatch(toggleHiddenMenu())
+								: navigate("/register");
+						}}
+						style={{ cursor: "pointer" }}
+					/>
+
+					<ModalUser />
+
+					<FaShoppingCart style={{ fontSize: "1.5rem", cursor: "pointer" }} />
+				</LinksContainer>
+				<BurguerMenu />
+			</HeaderStyled>
+		</>
+	);
 };
 
 export default HeaderContainer;
