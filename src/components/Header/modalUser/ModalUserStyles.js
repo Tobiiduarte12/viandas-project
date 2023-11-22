@@ -19,6 +19,10 @@ export const ModalUserContainer = styled(motion.div)`
 	@media (max-width: 768px) {
 		left: 0;
 	}
+
+	@media (max-width: 600px) {
+		width: 40%;
+	}
 `;
 
 export const ModalUserContent = styled.div`
