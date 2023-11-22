@@ -5,7 +5,7 @@ import { FormStyled } from "../formStyles/FormStyles";
 import FormInput from "../formInput/FormInput";
 import { LinkStyled } from "../../pages/Login/LoginStyled";
 import { useNavigate } from "react-router-dom";
-import Submit from "../buttonSubmit/Submit";
+import Submit from "../submit/Submit";
 
 const LoginForm = () => {
 	const navigate = useNavigate();

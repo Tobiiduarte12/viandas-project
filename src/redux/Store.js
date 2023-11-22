@@ -10,12 +10,13 @@ import userReducer from "./user/userSlice";
 const reducers = combineReducers({
 	categories: categoriesReducer,
 	products: productsReducer,
+	user: userReducer,
 });
 
 export const persistConfig = {
 	key: "root",
 	storage,
-	whitelist: ["categories"],
+	whitelist: ["categories", "user"],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
