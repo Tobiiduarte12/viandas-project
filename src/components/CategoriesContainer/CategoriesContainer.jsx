@@ -3,7 +3,7 @@ import {
   CategoriesContainerStyled,
   PCategorias,
 } from "./CategoriesContainerStyles";
-import { Categories } from "../../data/categories";
+import { Categories } from "../../data/Categories";
 import { useSelector } from "react-redux";
 import Categoria from "./Categoria";
 
