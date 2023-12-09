@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import Categoria from "./Categoria";
 
 const CategoriesContainer = () => {
-  const { categories } = useSelector((state) => state.categories);
+  const { Categories } = useSelector((state) => state.categories);
 
   return (
     <>
