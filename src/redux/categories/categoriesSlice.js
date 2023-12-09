@@ -16,9 +16,9 @@ export const categoriesSlice = createSlice({
         selectedCategory:
           action.payload !== state.selectedCategory ? action.payload : null,
       };
-      categories: (state) => {
-        return state;
-      };
+    },
+    categories: (state) => {
+      return state;
     },
   },
 });
