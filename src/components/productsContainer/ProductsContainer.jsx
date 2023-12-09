@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductsContainerStyled } from "./ProductsContainerStyles";
-// import { Products } from "../../data/Products";
+import { products } from "../../data/Products";
 import CardProduct from "./Product";
 import { useSelector } from "react-redux";
 
@@ -14,15 +14,11 @@ const ProductsContainer = () => {
   }
 
   return (
-    <>
-      <ProductsContainerStyled>
-        {Object.entries(products).map(([, foods]) => {
-          return foods.map((food) => {
-            return <CardProduct {...food} key={food.id} />;
-          });
-        })}
-      </ProductsContainerStyled>
-    </>
+    <ProductsContainerStyled>
+      {Object.entries(products).map(([, foods]) => {
+        return foods.map((food) => <CardProduct {...food} key={food.id} />);
+      })}
+    </ProductsContainerStyled>
   );
 };
 
