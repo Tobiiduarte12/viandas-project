@@ -3,7 +3,7 @@ import {
   CategoriesContainerStyled,
   PCategorias,
 } from "./CategoriesContainerStyles";
-// import { Categories } from "../../data/categories";
+import { Categories } from "../../data/categories";
 import { useSelector } from "react-redux";
 import Categoria from "./Categoria";
 
@@ -14,7 +14,7 @@ const CategoriesContainer = () => {
     <>
       <PCategorias>Categorias</PCategorias>
       <CategoriesContainerStyled>
-        {categories.map((category) => {
+        {Categories.map((category) => {
           return <Categoria {...category} key={category.id}></Categoria>;
         })}
       </CategoriesContainerStyled>
