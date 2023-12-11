@@ -1,1 +1,1 @@
-export const BASE_URL = "https://nucbaz-api.vercel.app/";
+export const BASE_URL = "https://backend-viandas-now.vercel.app/";
