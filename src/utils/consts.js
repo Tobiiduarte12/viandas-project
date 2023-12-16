@@ -1,1 +1,1 @@
-export const BASE_URL = `https://backend-viandas-now.vercel.app/`;
+export const BASE_URL = `http://localhost:8080/`;
