@@ -15,6 +15,8 @@ import LoginInput from "../loginInput/LoginInput";
 const LoginForm = () => {
   const dispatch = useDispatch();
 
+  useRedirect("/");
+
   return (
     <>
       {" "}
