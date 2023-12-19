@@ -9,7 +9,6 @@ import { createUser } from "../../axios/axios-users";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "../../redux/user/userSlice";
 import useRedirect from "../../components/hooks/useRedirect";
-import { Navigate } from "react-router-dom";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -35,6 +34,8 @@ const Register = () => {
                 ...user.usuario,
               })
             );
+          } else {
+            console.log("Error al crear usuario");
           }
         }}
       >
@@ -47,7 +48,7 @@ const Register = () => {
             <p>Ya tienes cuenta? Inicia Sesion!</p>
           </AccountExists>
 
-          <Submit type="button">Crear Cuenta</Submit>
+          <Submit>Crear Cuenta</Submit>
         </Form>
       </Formik>
     </RegisterSection>
