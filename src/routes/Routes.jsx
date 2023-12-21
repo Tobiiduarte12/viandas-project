@@ -11,6 +11,7 @@ import LocalWrapper from "../pages/LocalWrapper/LocalWrapper";
 import Error404 from "../components/error/Error404";
 import Register from "../pages/register/Register";
 import LocalCheckOut from "../pages/localCheckOut/LocalCheckOut";
+import OrderSuccess from "../pages/orderSuccess/OrderSuccess";
 
 const Routes = () => {
   return (
@@ -28,6 +29,8 @@ const Routes = () => {
           </Route>
 
           <Route path="checkout" element={<LocalCheckOut />}></Route>
+
+          <Route path="ordersuccess" element={<OrderSuccess />}></Route>
 
           <Route path="*" element={<Error404 />} />
         </ReactDomRoutes>

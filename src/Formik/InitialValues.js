@@ -11,7 +11,7 @@ export const loginInitialValues = {
 
 export const checkoutInitialValues = {
   name: "",
-  phone: "",
-  localidad: "",
-  direccion: "",
+  cellPhone: "",
+  location: "",
+  address: "",
 };

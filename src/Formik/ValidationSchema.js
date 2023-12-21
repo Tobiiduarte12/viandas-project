@@ -24,12 +24,12 @@ export const loginValidationSchema = Yup.object({
 
 export const checkoutValidationSchema = Yup.object({
   name: Yup.string().trim().required("Completa este campo por favor"),
-  phone: Yup.string()
+  cellPhone: Yup.string()
     .trim()
     .matches(/^[0-9]+$/, "Solo se permiten números")
     .min(10, "Requiere un mínimo de 10 números")
     .max(10, "Requiere un máximo de 10 números")
     .required("Completa este campo por favor"),
-  localidad: Yup.string().trim().required("Completa este campo por favor"),
-  direccion: Yup.string().trim().required("Completa este campo por favor"),
+  location: Yup.string().trim().required("Completa este campo por favor"),
+  address: Yup.string().trim().required("Completa este campo por favor"),
 });
