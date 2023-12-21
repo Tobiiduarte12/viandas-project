@@ -9,6 +9,7 @@ import { createUser } from "../../axios/axios-users";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "../../redux/user/userSlice";
 import useRedirect from "../../components/hooks/useRedirect";
+import { FormStyled } from "../../components/formStyles/FormStyles";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ const Register = () => {
           }
         }}
       >
-        <Form>
+        <FormStyled>
           <LoginInput name="name" type="text" placeholder="nombre" />
           <LoginInput name="email" type="text" placeholder="Email" />
           <LoginInput name="password" type="password" placeholder="Password" />
@@ -49,7 +50,7 @@ const Register = () => {
           </AccountExists>
 
           <Submit>Crear Cuenta</Submit>
-        </Form>
+        </FormStyled>
       </Formik>
     </RegisterSection>
   );
