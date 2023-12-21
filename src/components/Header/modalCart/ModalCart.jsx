@@ -23,7 +23,6 @@ const ModalCart = () => {
   const dispatch = useDispatch();
 
   const { cartItems, shippingCost } = useSelector((state) => state.cart);
-  console.log(cartItems);
 
   const hiddenCart = useSelector((state) => state.cart.hidden);
 
