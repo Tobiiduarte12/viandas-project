@@ -1,10 +1,17 @@
 export const registerInitialValues = {
-	name: "",
-	email: "",
-	password: "",
+  name: "",
+  email: "",
+  password: "",
 };
 
 export const loginInitialValues = {
-	email: "",
-	password: "",
+  email: "",
+  password: "",
+};
+
+export const checkoutInitialValues = {
+  name: "",
+  phone: "",
+  localidad: "",
+  direccion: "",
 };

@@ -61,11 +61,13 @@ export const ProductCardStyled = styled.div`
 export const ContainerPrice = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
 `;
 
 export const CardPrice = styled.span`
   font-weight: 800;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   background: linear-gradient(83deg, #ffa100, #fb103d);
   background-clip: text;
   -webkit-background-clip: text;

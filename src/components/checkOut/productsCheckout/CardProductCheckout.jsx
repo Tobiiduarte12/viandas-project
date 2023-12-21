@@ -1,9 +1,4 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../../../redux/cart/cartSlice";
-
-import { MdAddCircleOutline } from "react-icons/md";
-import { FaMinus, FaTrashAlt } from "react-icons/fa";
 import {
   CardTitleStyled,
   PriceContainerStyled,
@@ -12,10 +7,15 @@ import {
   QuantityContainerStyled,
   TextContainerStyled,
   TextStyled,
-} from "./ModalCartStyles";
-import { formatPrice } from "../../../utils/formatPrice";
+} from "../../Header/modalCart/ModalCartStyles";
 
-const ModalCartCard = ({ img, title, desc, price, quantity, id }) => {
+import { MdAddCircleOutline } from "react-icons/md";
+import { FaTrashAlt, FaMinus } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { formatPrice } from "../../../utils/formatPrice";
+import { addToCart, removeFromCart } from "../../../redux/cart/cartSlice";
+
+const CardProductCheckout = ({ img, title, desc, price, quantity, id }) => {
   const dispatch = useDispatch();
 
   return (
@@ -48,4 +48,4 @@ const ModalCartCard = ({ img, title, desc, price, quantity, id }) => {
   );
 };
 
-export default ModalCartCard;
+export default CardProductCheckout;

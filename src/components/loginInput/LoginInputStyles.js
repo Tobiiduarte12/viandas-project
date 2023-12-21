@@ -4,6 +4,7 @@ export const InputContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  width: 250px;
 `;
 
 export const LoginInputStyled = styled.input`

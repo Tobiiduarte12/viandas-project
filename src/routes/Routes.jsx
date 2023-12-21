@@ -1,7 +1,7 @@
 import {
-	BrowserRouter,
-	Routes as ReactDomRoutes,
-	Route,
+  BrowserRouter,
+  Routes as ReactDomRoutes,
+  Route,
 } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import Home from "../pages/Home/Home";
@@ -10,27 +10,30 @@ import LocalesWrapper from "../pages/Locales/LocalesWrapper";
 import LocalWrapper from "../pages/LocalWrapper/LocalWrapper";
 import Error404 from "../components/error/Error404";
 import Register from "../pages/register/Register";
+import LocalCheckOut from "../pages/localCheckOut/LocalCheckOut";
 
 const Routes = () => {
-	return (
-		<BrowserRouter>
-			<Layout>
-				<ReactDomRoutes>
-					<Route path="/" element={<Home />} />
+  return (
+    <BrowserRouter>
+      <Layout>
+        <ReactDomRoutes>
+          <Route path="/" element={<Home />} />
 
-					<Route path="login" element={<Login />} />
-					<Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
 
-					<Route path="locales">
-						<Route index element={<LocalesWrapper />} />
-						<Route path=":local" element={<LocalWrapper />} />
-					</Route>
+          <Route path="locales">
+            <Route index element={<LocalesWrapper />} />
+            <Route path=":local" element={<LocalWrapper />} />
+          </Route>
 
-					<Route path="*" element={<Error404 />} />
-				</ReactDomRoutes>
-			</Layout>
-		</BrowserRouter>
-	);
+          <Route path="checkout" element={<LocalCheckOut />}></Route>
+
+          <Route path="*" element={<Error404 />} />
+        </ReactDomRoutes>
+      </Layout>
+    </BrowserRouter>
+  );
 };
 
 export default Routes;

@@ -90,6 +90,7 @@ export const ProductContainerStyled = styled.div`
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   border-radius: 15px;
+  background-color: #29262b;
 
   & img {
     width: 80px;
@@ -100,6 +101,10 @@ export const ProductContainerStyled = styled.div`
 
   @media (max-width: 800px) {
     width: 300px;
+  }
+
+  @media (max-width: 650px) {
+    width: 250px;
   }
 `;
 
@@ -136,7 +141,6 @@ export const PriceStyled = styled.span`
 `;
 
 export const PriceContainerStyled = styled.div`
-  z-index: 1000;
   & p {
     text-align: center;
     margin-bottom: 0;
