@@ -12,6 +12,7 @@ import Error404 from "../components/error/Error404";
 import Register from "../pages/register/Register";
 import LocalCheckOut from "../pages/localCheckOut/LocalCheckOut";
 import OrderSuccess from "../pages/orderSuccess/OrderSuccess";
+import ProtectedRoute from "../components/protectedRoute/ProtectedRoute";
 
 const Routes = () => {
   return (
@@ -20,17 +21,24 @@ const Routes = () => {
         <ReactDomRoutes>
           <Route path="/" element={<Home />} />
 
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-          <Route path="locales">
+          <Route path="/locales">
             <Route index element={<LocalesWrapper />} />
             <Route path=":local" element={<LocalWrapper />} />
           </Route>
 
-          <Route path="checkout" element={<LocalCheckOut />}></Route>
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute redirectTo="/login">
+                <LocalCheckOut />;
+              </ProtectedRoute>
+            }
+          />
 
-          <Route path="ordersuccess" element={<OrderSuccess />}></Route>
+          <Route path="/ordersuccess" element={<OrderSuccess />}></Route>
 
           <Route path="*" element={<Error404 />} />
         </ReactDomRoutes>
