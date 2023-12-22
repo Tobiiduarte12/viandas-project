@@ -16,4 +16,8 @@ export const ButtonSubmitStyled = styled(motion.button)`
   &:hover {
     background-color: #202020;
   }
+
+  @media (max-width: 400px) {
+    width: 120px;
+  }
 `;

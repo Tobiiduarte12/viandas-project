@@ -19,7 +19,7 @@ const LoginInput = ({ type, placeholder, name }) => {
           />
 
           <ErrorMessage name={field.name}>
-            {(message) => <ErrorMsgStyled>{message}</ErrorMsgStyled>}
+            {(message) => <ErrorMsgStyled>{message}⚠️</ErrorMsgStyled>}
           </ErrorMessage>
         </InputContainerStyled>
       )}

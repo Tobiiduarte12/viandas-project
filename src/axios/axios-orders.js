@@ -23,7 +23,9 @@ export const getOrders = async (dispatch, currentUser) => {
     }
   } catch (error) {
     console.log(error);
-    dispatch(fetchOrdersFail("Oh! Algo salio mal, intenta de nuevo"));
+    dispatch(
+      fetchOrdersFail("Oh! Algo salio mal. Es necesario iniciar sesión")
+    );
   }
 };
 

@@ -5,7 +5,8 @@ export const ErrorMessageStyled = styled.div`
   color: #ffffff;
   font-size: 0.8rem;
   text-align: center;
-  background-color: red;
+  background-color: #000;
+  padding: 2px;
   border-radius: 15px;
   margin-top: 2px;
 `;
@@ -24,19 +25,19 @@ export const FormStyled = styled(Form)`
   display: flex;
   background-color: #ffffff81;
   border-radius: 8px;
-  padding: 20px;
+  padding: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  width: 50%;
+  width: 400px;
 
   @media (max-width: 768px) {
-    width: 90%;
-
+    width: 70%;
+    padding: 5px;
     & input {
-      width: 100%;
+      width: 95%;
     }
   }
 `;
