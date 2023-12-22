@@ -8,9 +8,12 @@ import {
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart/cartSlice";
 import { formatPrice } from "../../utils/formatPrice";
+import { ToastContainer, toast } from "react-toastify";
 
 const CardProduct = ({ img, title, desc, id, price }) => {
   const dispatch = useDispatch();
+
+  const notify = () => toast("Producto agregado al carrito");
 
   return (
     <ProductCardStyled>
@@ -20,11 +23,14 @@ const CardProduct = ({ img, title, desc, id, price }) => {
       <ContainerPrice>
         <CardPrice>{formatPrice(price)}</CardPrice>
         <CardButton
-          onClick={() => dispatch(addToCart({ img, title, desc, id, price }))}
+          onClick={() =>
+            dispatch(addToCart({ img, title, desc, id, price })) && notify
+          }
         >
           Agregar
         </CardButton>
       </ContainerPrice>
+      <ToastContainer />
     </ProductCardStyled>
   );
 };

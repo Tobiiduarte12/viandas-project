@@ -45,7 +45,7 @@ export const TitleStyled = styled.div`
   justify-content: space-between;
   align-items: flex-start;
 
-  @media (max-height: 800px) {
+  @media (max-width: 800px) {
     & h1 {
       font-size: 1.2rem;
     }
